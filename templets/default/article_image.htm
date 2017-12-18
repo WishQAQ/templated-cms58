@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+	<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+
+
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	
+
+	<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmsurl/}/dedemao/css/bootstrap.min.css" media="screen">
+	
+ 	<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+	<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmsurl/}/dedemao/rs-plugin/css/settings.css" media="screen" />
+	
+	<link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/dedemao/css/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmsurl/}/dedemao/css/lightbox.min.css" media="all"/>   
+	<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmsurl/}/dedemao/css/stroke-gap-icons.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmsurl/}/dedemao/css/pe-icon-7-stroke.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmsurl/}/dedemao/css/elegant-icons.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmsurl/}/dedemao/css/font-awesome.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmsurl/}/dedemao/css/style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmsurl/}/dedemao/css/responsive.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmsurl/}/dedemao/rs-plugin/css/settings.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmsurl/}/dedemao/css/animate.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmsurl/}/dedemao/css/flexslider.css" media="screen" />
+	
+	<link rel="shortcut icon" href="{dede:global.cfg_cmsurl/}/dedemao/upload/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="{dede:global.cfg_cmsurl/}/dedemao/upload/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+	<!-- Preloader -->
+	<div id="preloader">
+	    <div id="status">&nbsp;</div>
+	</div>
+
+	{dede:include filename="head.htm"/}
+
+<div class="main-wrapper">
+
+	<!-- Page Title -->
+		<section id="page-title">
+			<div class="container clearfix">
+				<h1>{dede:field name='typename' /}</h1>
+				<ol class="breadcrumb">
+					{dede:field name='position'/}
+				</ol> <!-- end breadcrumbs -->
+			</div> <!-- end container -->
+		</section> <!-- end page title -->
+
+	<!-- Blog Standard -->
+		<section class="section-wrap portfolio-single">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-8">
+						<div class="owl-carousel owl-theme" id="owl-slider-one-img" style="opacity: 1; display: block;">
+
+							{dede:productimagelist} 
+    <p><img src="[field:imgsrc/]"/></p> 
+    {/dede:productimagelist}
+
+							 <!-- end second item -->
+
+							 <!-- end third item -->
+
+						</div> <!-- end owl carousel -->
+					</div> <!-- end col -->
+
+					<div class="col-md-4">
+						<div class="portfolio-description">
+							<h2>{dede:field.title/}</h2>
+							<p>{dede:field.body/}</p>
+							<ul>
+								<li><span>时间:</span> {dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</li>
+								<li><span>作者:</span> {dede:field.writer/}</li>
+								<li><span>点击:</span> <script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script>次</li>
+							</ul>
+							
+							<div class="entry-share">
+								
+								<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+							</div>
+						</div>		
+					</div> <!-- end col -->
+					
+				</div> <!-- end row -->
+			</div> <!-- end container -->
+		</section>
+
+
+	</div>
+	
+	<!-- Footer -->
+		{dede:include filename="footer.htm"/}
+        <!-- end footer -->
+
+
+	</div> <!-- end main-wrapper -->
+	
+
+	<!-- jQuery Scripts -->
+	<script src="{dede:global.cfg_cmsurl/}/dedemao/js/jquery.min.js"></script>
+ 	<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/dedemao/js/lightbox.min.js"></script>	
+	<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/dedemao/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/dedemao/js/bootstrap-hover-dropdown.min.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/dedemao/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/dedemao/js/jquery.countTo.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/dedemao/js/jquery.appear.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/dedemao/js/plugins-scroll.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/dedemao/js/isotope.pkgd.min.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/dedemao/js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/dedemao/js/jquery.easypiechart.min.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/dedemao/js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/dedemao/js/imagesloaded.pkgd.min.js"></script>
+	<script src="{dede:global.cfg_cmsurl/}/dedemao/js/wow.min.js"></script>
+
+	<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+	<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/dedemao/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+	<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/dedemao/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+	<!-- Custom Theme JavaScript -->
+    <script src="{dede:global.cfg_cmsurl/}/dedemao/js/scripts.js"></script>
+
+	<!-- Revolution Slider -->
+	<script type="text/javascript">
+				jQuery(document).ready(function() {
+					   jQuery('.tp-banner').revolution(
+						{
+							delay:9000,
+							startwidth:1170,
+							startheight:680,
+							hideThumbs:10,
+
+							navigationType:"bullet",							
+							navigationStyle:"preview1",
+
+							hideArrowsOnMobile:"on",
+							
+							touchenabled:"on",
+							onHoverStop:"on",
+							spinner:"spinner4"
+						});
+				});
+	</script>
+	  
+</body>
+</html>
